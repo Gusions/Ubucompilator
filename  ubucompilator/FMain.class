@@ -1,0 +1,167 @@
+' Gambas class file
+
+PUBLIC SUB Form_Open()
+
+END
+
+PUBLIC SUB Button1_Click()
+
+   DIM sOutput AS String
+   DIM indirizzo AS String
+
+   indirizzo = DirChooser1.SelectedPath
+
+   SHELL "cd " & indirizzo & " && " & " gksudo sh autogen.sh " WAIT TO sOutput
+  TextArea1.Text = sOutput
+
+  
+
+END
+
+PUBLIC SUB Button2_Click()
+
+   DIM sOutput AS String
+   DIM indirizzo AS String
+
+   indirizzo = DirChooser1.SelectedPath
+
+   SHELL "cd " & indirizzo & " && " & " gksudo ./configure" WAIT TO sOutput
+  TextArea1.Text = sOutput
+
+END
+
+
+
+PUBLIC SUB Button3_Click()
+
+   DIM sOutput AS String
+   DIM indirizzo AS String
+
+   indirizzo = DirChooser1.SelectedPath
+
+  SHELL "cd " & indirizzo & " && " & " gksudo make" WAIT TO sOutput
+  TextArea1.Text = sOutput
+END
+
+
+
+PUBLIC SUB Button4_Click()
+
+  
+  
+   DIM sOutput AS String
+   DIM indirizzo AS String
+   DIM indirizzo1 AS String
+
+   indirizzo1 = DirChooser1.SelectedPath
+   indirizzo = DirChooser1.SelectedPath
+
+   SHELL "cd " & indirizzo & " && " & " gksudo make install" WAIT TO sOutput
+  TextArea1.Text = sOutput
+
+END
+
+
+PUBLIC SUB Button5_Click()
+
+  DIM sOutput AS String
+  DIM emailadress AS String
+  DIM indirizzo AS String
+
+indirizzo = DirChooser1.SelectedPath
+
+
+  emailadress = TextBox1.Text
+  
+  SHELL "cd " & indirizzo & ";" & " dh_make -s -e " & emailadress & " -n --copyright gpl &" WAIT TO sOutput
+WAIT
+   
+ TextArea1.Text = sOutput
+END
+
+PUBLIC SUB Button6_Click()
+
+  DIM sOutput AS String
+  DIM debuildbinary2 AS String
+debuildbinary2 = DirChooser1.SelectedPath
+
+  
+  SHELL "cd " & debuildbinary2 & " && " & " debuild binary" WAIT TO sOutput
+  
+ TextArea1.Text = sOutput
+
+END
+
+
+
+
+
+PUBLIC SUB Esci_Click()
+
+  ME.Close
+
+END
+
+
+
+PUBLIC SUB Aggiornamenti_Click()
+
+    SHELL "firefox https://code.google.com/p/ubucompilator"
+  ME.Close
+END
+
+
+
+PUBLIC SUB About_Click()
+
+  FAbout.Show
+  
+END
+
+
+PUBLIC SUB MenuTray_Show()
+
+      
+END 
+
+PUBLIC SUB MenuTray_Hide()
+  
+Fmain.Visible = FALSE
+
+  
+END
+
+
+PUBLIC SUB TrayIcon1_MouseDown()
+  
+IF Mouse.Left THEN  
+  IF NOT FMain.Visible THEN
+      FMain.Show()
+      
+  ELSE 
+      FMain.Hide()
+      
+  END IF
+END IF  
+    
+END
+
+
+
+PUBLIC SUB dependenciesmanagement_Click()
+
+  FGestione.Show
+
+END
+
+PUBLIC SUB Updates_Click()
+
+  SHELL "firefox http://code.google.com/p/ubucompilator/updates/list "
+
+END
+
+PUBLIC SUB reportbug_Click()
+
+  SHELL "firefox http://code.google.com/p/ubucompilator/issues/list"
+
+END

@@ -1,0 +1,14 @@
+' Gambas class file
+
+
+PUBLIC SUB Button3_Click()
+ 
+ SHELL "firefox http://www.arresojas.it/tag/ubucompilator"
+ME.Close
+END
+
+PUBLIC SUB Button2_Click()
+
+  ME.Close
+
+END
