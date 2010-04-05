@@ -1,0 +1,21 @@
+# Gambas Form File 2.0
+
+{ Form Form
+  MoveScaled(0,0,104,58)
+  Text = ("Ubucompilator-Unziptool")
+  { Button1 Button
+    MoveScaled(1,51,23,5)
+    Text = ("Unzip .zip ")
+  }
+  { FileChooser1 FileChooser
+    MoveScaled(1,1,102,48)
+  }
+  { Button2 Button
+    MoveScaled(41,51,23,5)
+    Text = ("Unzip .tar.gz")
+  }
+  { Button3 Button
+    MoveScaled(80,51,23,5)
+    Text = ("Unzip .tar.bz2")
+  }
+}

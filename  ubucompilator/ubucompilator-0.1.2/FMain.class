@@ -1,0 +1,190 @@
+' Gambas class file
+
+PUBLIC SUB Form_Open()
+
+END
+
+PUBLIC SUB Autogen1_Click()
+
+   DIM sOutput AS String
+   DIM indirizzo AS String
+
+   indirizzo = DirChooser1.SelectedPath
+
+   SHELL "cd " & indirizzo & " && " & " gksudo sh autogen.sh " WAIT TO sOutput
+  TextArea1.Text = sOutput
+
+  
+
+END
+
+PUBLIC SUB Configure2_Click()
+
+   DIM sOutput AS String
+   DIM indirizzo AS String
+
+   indirizzo = DirChooser1.SelectedPath
+
+   SHELL "cd " & indirizzo & " && " & " gksudo ./configure" WAIT TO sOutput
+  TextArea1.Text = sOutput
+
+END
+
+
+
+PUBLIC SUB Make3_Click()
+
+   DIM sOutput AS String
+   DIM indirizzo AS String
+
+   indirizzo = DirChooser1.SelectedPath
+
+  SHELL "cd " & indirizzo & " && " & " gksudo make" WAIT TO sOutput
+  TextArea1.Text = sOutput
+END
+
+
+
+PUBLIC SUB MakeInstall4_Click()
+
+  
+  
+   DIM sOutput AS String
+   DIM indirizzo AS String
+   DIM indirizzo1 AS String
+
+   indirizzo1 = DirChooser1.SelectedPath
+   indirizzo = DirChooser1.SelectedPath
+
+   SHELL "cd " & indirizzo & " && " & " gksudo make install" WAIT TO sOutput
+  TextArea1.Text = sOutput
+
+END
+
+
+PUBLIC SUB DhMake_Click()
+
+  DIM sOutput AS String
+  DIM emailadress AS String
+  DIM indirizzo AS String
+
+indirizzo = DirChooser1.SelectedPath
+
+
+  emailadress = TextBox1.Text
+  
+  SHELL "cd " & indirizzo & ";" & " dh_make -s -e " & emailadress & " -n --copyright gpl &" WAIT TO sOutput
+WAIT
+   
+ TextArea1.Text = sOutput
+END
+
+PUBLIC SUB Debuild6_Click()
+
+  DIM sOutput AS String
+  DIM debuildbinary2 AS String
+debuildbinary2 = DirChooser1.SelectedPath
+
+  
+  SHELL "cd " & debuildbinary2 & " && " & " debuild binary" WAIT TO sOutput
+  
+ TextArea1.Text = sOutput
+
+END
+
+
+
+
+
+PUBLIC SUB Esci_Click()
+
+  ME.Close
+
+END
+
+
+
+PUBLIC SUB Aggiornamenti_Click()
+
+    SHELL "firefox https://code.google.com/p/ubucompilator"
+  ME.Close
+END
+
+PUBLIC SUB Updates_Click()
+
+  Desktop.Open("http://feeds.launchpad.net/ubucompilator/announcements.atom")
+
+END
+
+PUBLIC SUB reportbug_Click()
+
+Desktop.Open("https://bugs.launchpad.net/ubucompilator/+filebug")
+
+END
+
+
+PUBLIC SUB About_Click()
+
+  FAbout.Show
+  
+END
+
+
+PUBLIC SUB MenuTray_Show()
+
+      
+END 
+
+PUBLIC SUB MenuTray_Hide()
+  
+Fmain.Visible = FALSE
+
+  
+END
+
+
+PUBLIC SUB TrayIcon1_MouseDown()
+  
+IF Mouse.Left THEN  
+  IF NOT FMain.Visible THEN
+      FMain.Show()
+      
+  ELSE 
+      FMain.Hide()
+      
+  END IF
+END IF  
+    
+END
+
+
+
+
+
+
+
+
+PUBLIC SUB Configureopt7_Click()
+
+  DIM sOutput AS String
+   DIM indirizzo AS String
+
+   indirizzo = DirChooser1.SelectedPath
+
+   SHELL "cd " & indirizzo & " && " & " ./configure --prefix /opt " WAIT TO sOutput
+  TextArea1.Text = sOutput
+
+END
+
+
+PUBLIC SUB TrayIcon1_Menu()
+
+END 
+
+PUBLIC SUB Unziptool_Click()
+
+  FUNZIP.show
+
+END
+
+
