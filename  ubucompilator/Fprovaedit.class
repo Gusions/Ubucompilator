@@ -1,0 +1,14 @@
+' Gambas class file
+
+
+PUBLIC SUB Button1_Click()
+  DIM indirizzo AS String
+
+indirizzo = FileChooser1.SelectedPath
+
+  
+  SHELL "cd " & indirizzo & ";" & " gedit " & indirizzo & ";" & 4
+   
+
+END
+  
