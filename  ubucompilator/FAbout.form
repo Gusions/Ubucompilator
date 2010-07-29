@@ -1,0 +1,51 @@
+# Gambas Form File 2.0
+
+{ Form Form
+  MoveScaled(0,0,57,23)
+  Text = ("About Ubucompilator")
+  Icon = Picture["Immagini/informazioniprogramma.png"]
+  Border = Window.Fixed
+  { PictureBox1 PictureBox
+    MoveScaled(24,1,10,10)
+    Picture = Picture["Immagini/ubucompilator64x64.png"]
+    Alignment = Align.Top
+  }
+  { Button1 Button
+    MoveScaled(41,18,15,4)
+    Text = ("Close")
+  }
+  { TextLabel1 TextLabel
+    MoveScaled(20,14,19,3)
+    Text = ("\xC2\xA92010 Marco Usai")
+    Alignment = Align.Bottom
+  }
+  { Label2 Label
+    MoveScaled(11,10,38,4)
+    Font = Font["Comic Sans MS,Bold,+6"]
+    Text = ("Ubucompilator 1.0\n")
+    Alignment = Align.Center
+  }
+  { Button2 Button
+    MoveScaled(22,18,15,4)
+    Text = ("License")
+  }
+  { Button3 Button
+    MoveScaled(0,18,15,4)
+    Text = ("Contributor")
+  }
+  { PictureBox2 PictureBox
+    MoveScaled(54,0,2.2857,3)
+    Mouse = Mouse.Pointing
+    Picture = Picture["Immagini/twitter-symbolic.png"]
+  }
+  { PictureBox3 PictureBox
+    MoveScaled(48,0,2.5714,3)
+    Mouse = Mouse.Pointing
+    Picture = Picture["Immagini/applications-internet.png"]
+  }
+  { PictureBox4 PictureBox
+    MoveScaled(51,0,2.5714,2.5714)
+    Mouse = Mouse.Pointing
+    Picture = Picture["Immagini/folder-publicshare.png"]
+  }
+}
