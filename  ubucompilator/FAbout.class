@@ -1,0 +1,49 @@
+' Gambas class file
+
+
+
+PUBLIC SUB Button1_Click()
+
+  ME.Close
+
+END
+
+
+PUBLIC SUB Button2_Click()
+
+  Licenza.Show
+
+END
+
+PUBLIC SUB Button3_Click()
+
+  Riconoscimenti.Show
+END
+
+PUBLIC SUB TextLabel2_MouseDown()
+
+  Desktop.Open("http://ubucompilator.wordpress.com")
+
+END
+
+
+
+PUBLIC SUB PictureBox2_MouseDown()
+
+  Desktop.Open("http://www.twitter.com/Gusions")
+
+END
+
+PUBLIC SUB PictureBox3_MouseDown()
+
+  Desktop.Open("http://sites.google.com/site/ubucompilator/")
+
+END
+
+PUBLIC SUB PictureBox4_MouseDown()
+
+  Desktop.Open("http://launchpad.net/~Gusions")
+
+END
+
+

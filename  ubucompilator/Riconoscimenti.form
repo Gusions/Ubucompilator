@@ -1,0 +1,27 @@
+# Gambas Form File 2.0
+
+{ Form Form
+  MoveScaled(0,0,66,38)
+  Text = ("Contributor")
+  { TextArea1 TextArea
+    MoveScaled(1,1,62,29)
+    Text = ("Marco \"Gusions\" Usai (Mantainer) <gusions@gmail.com>\nFrancesco \"Ceskho OpenCode\" Apruzzese (Code Helper) <cescoap@gmail.com>")
+    ReadOnly = True
+    Wrap = True
+    ScrollBar = Scroll.Vertical
+  }
+  { Button1 Button
+    MoveScaled(128,18,16,5)
+    Text = ("")
+  }
+  { Button2 Button
+    MoveScaled(49,32,16,4)
+    Text = ("Close")
+    Picture = Picture["icon:/16/close"]
+  }
+  { Button3 Button
+    MoveScaled(1,32,31,4)
+    Text = ("Visit the Ubucompilator's site!")
+    Picture = Picture["Immagini/ubucompilator_tray.png"]
+  }
+}

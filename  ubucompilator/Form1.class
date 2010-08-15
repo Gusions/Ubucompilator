@@ -1,0 +1,8 @@
+' Gambas class file
+
+
+PUBLIC SUB Form_Open()
+
+  PRINT File.BaseName("gsfgdf/gfdgdf/ilnome.it")
+
+END

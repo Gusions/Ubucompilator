@@ -1,0 +1,57 @@
+' Gambas class file
+
+PUBLIC SUB Form_Open()
+
+    '-- variabile contenente il file control aperto
+  DIM filecontrol AS String
+  
+      '-- centra il form
+  ME.center
+
+  IF Dialog.OpenFile(FALSE) THEN RETURN
+  
+  IF NOT (File.BaseName(Dialog.Path) = "control" OR File.BaseName(Dialog.Path) = "Control") THEN 
+    PRINT "Not a control file"
+    RETURN
+  END IF
+  
+  filecontrol = File.Load(Dialog.Path)
+  'PRINT filecontrol
+  TextBox12.Text = Split(Split(filecontrol, "\n")[0], ":")[1]
+  TextBox13.Text = Split(Split(filecontrol, "\n")[1], ":")[1]
+  TextBox14.Text = Split(Split(filecontrol, "\n")[2], ":")[1]
+  TextBox15.Text = Split(Split(filecontrol, "\n")[3], ":")[1]
+  TextBox16.Text = Split(Split(filecontrol, "\n")[4], ":")[1]
+  TextBox17.Text = Split(Split(filecontrol, "\n")[5], ":")[1]
+  TextBox18.Text = Split(Split(filecontrol, "\n")[6], ":")[1] '& Split(Split(filecontrol, "\n")[6], ":")[2]
+  TextBox19.Text = Split(Split(filecontrol, "\n")[8], ":")[1]
+  TextBox20.Text = Split(Split(filecontrol, "\n")[9], ":")[1]
+  TextBox21.Text = Split(Split(filecontrol, "\n")[10], ":")[1]
+  TextBox22.Text = Split(Split(filecontrol, "\n")[11], ":")[1]
+  TextArea2.Text = Split(filecontrol, "\n")[12]
+    
+END
+  
+
+
+PUBLIC SUB Button2_Click()
+
+  DIM new_file AS String
+  
+  new_file = "Source: " & TextBox12.Text & "\n"
+  new_file &= "Section: " & TextBox13.Text & "\n"
+  new_file &= "Priority: " & TextBox14.Text & "\n"
+  new_file &= "Maintainer: " & TextBox15.Text & "\n"
+  new_file &= "Build-Depends: " & TextBox16.Text & "\n"
+  new_file &= "Standards-Version: " & TextBox17.Text & "\n"
+  new_file &= "Homepage: " & TextBox18.Text & "\n\n"
+  new_file &= "Package: " & TextBox19.Text & "\n"
+  new_file &= "Architecture: " & TextBox20.Text & "\n"
+  new_file &= "Depends: " & TextBox21.Text & "\n"
+  new_file &= "Description: " & TextBox22.Text & "\n"
+  new_file &= " " & TextArea2.Text
+  
+  File.Save(Dialog.Path, new_file)
+
+ME.Close
+END
