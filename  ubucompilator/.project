@@ -1,0 +1,31 @@
+# Gambas Project File 2.0
+# Compiled with Gambas 2.21.0
+Title=ubucompilator
+Startup=FMain
+Icon=Immagini/ubucompilator.png
+Version=0.1.4
+Library=gb.gtk
+Library=gb.form
+Library=gb.compress
+Library=gb.desktop
+Library=gb.gtk.ext
+Library=gb.image
+Library=gb.settings
+Library=gb.web
+Description=A simply tool to compile and make .deb!
+Authors=Marco Usai (c) 2009!
+TabSize=2
+Translate=1
+Language=it
+ExecPath=/home/gusions/Scrivania/ubucompilator.gambas
+SourcePath=/home
+Maintainer=gusions
+Vendor=Marco Usai (Gusions)
+Address=gusions@gmail.com
+Url=http://www.endoftheinternet.com/
+License=General Public Licence
+UseRelease=1
+Systems=ubuntu
+Menus=Apps/Tools
+Categories=
+Groups=Development/Other

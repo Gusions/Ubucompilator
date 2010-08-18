@@ -1,0 +1,16 @@
+# Gambas Form File 2.0
+
+{ Form Form
+  MoveScaled(0,0,102,57)
+  Text = ("")
+  { FileChooser1 FileChooser
+    MoveScaled(1,1,94,48)
+    Filter = [("*.txt"), ("Text's file")]
+    ShowDirectory = True
+    ShowDetailed = True
+  }
+  { Button1 Button
+    MoveScaled(29,50,38,5)
+    Text = ("Edit Package's Information")
+  }
+}
