@@ -1,6 +1,0 @@
-# Gambas Form File 2.0
-
-{ Form1 Form
-  MoveScaled(0, 0, 64, 64)
-  Border = Window.Resizable
-}
