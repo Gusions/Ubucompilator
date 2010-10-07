@@ -1,0 +1,28 @@
+# Gambas Project File 2.0
+# Compiled with Gambas 2.21.0
+Title=Ubucompilator
+Startup=FMain
+Icon=Immagini/ubucompilator.png
+Version=0.99.1
+Library=gb.gui
+Library=gb.form
+Library=gb.compress
+Library=gb.desktop
+Library=gb.image
+Description=A simply tool to compile and make .deb!
+Authors=Marco Usai (c) 2009!
+TabSize=2
+Translate=1
+Language=it
+ExecPath=/home/gusions/Scrivania/Ubucompilator.gambas
+SourcePath=/home/gusions/Scrivania
+Maintainer=gusions
+Vendor=Marco Usai (Gusions)
+Address=gusions@gmail.com
+Url=http://www.arresojas.it
+License=General Public Licence
+UseRelease=1
+Systems=autotools,ubuntu
+Menus=,Applications/Programming
+Categories=,
+Groups=,electronics
