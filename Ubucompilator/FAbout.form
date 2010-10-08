@@ -1,0 +1,44 @@
+# Gambas Form File 2.0
+
+{ Form Form
+  MoveScaled(0,0,57,28)
+  Text = ("About Ubucompilator")
+  Icon = Picture["Immagini/dialog-information.png"]
+  Border = Window.Fixed
+  { PictureBox1 PictureBox
+    MoveScaled(1,-1,55,12)
+    Picture = Picture["Immagini/ubucompilator64x64.png"]
+    Alignment = Align.Center
+  }
+  { Button1 Button
+    MoveScaled(41,22,15,4)
+    Text = ("Close")
+    Picture = Picture["Immagini/dialog-error.png"]
+  }
+  { TextLabel1 TextLabel
+    MoveScaled(17,15,23,3)
+    Text = ("\xC2\xA92010 Marco Usai")
+    Alignment = Align.Bottom
+  }
+  { Label2 Label
+    MoveScaled(13,10,34,5)
+    Font = Font["Sawasdee,Bold,+6"]
+    Text = ("Ubucompilator 1.0  ")
+    Alignment = Align.Center
+  }
+  { Button2 Button
+    MoveScaled(21,22,15,4)
+    Text = ("License")
+    Picture = Picture["Immagini/dialog-question.png"]
+  }
+  { Button3 Button
+    MoveScaled(0,22,15,4)
+    Text = ("Contributor")
+    Picture = Picture["Immagini/dialog-warning.png"]
+  }
+  { TextLabel3 TextLabel
+    MoveScaled(15,18,32,3)
+    Mouse = Mouse.Pointing
+    Text = ("<a href=\"http://ubucompilator.wordpress.com/\">http://ubucompilator.wordpress.com</a>")
+  }
+}

@@ -1,0 +1,26 @@
+# Gambas Form File 2.0
+
+{ Form Form
+  MoveScaled(0,0,96,58)
+  Text = ("Ubucompilator-Unziptool")
+  Icon = Picture["Immagini/package-x-generic.png"]
+  { Button1 Button
+    MoveScaled(1,51,23,5)
+    Text = ("Unzip .zip ")
+    Picture = Picture["Immagini/application-x-zip.png"]
+  }
+  { FileChooser1 FileChooser
+    MoveScaled(1,1,93,48)
+    ShowDetailed = True
+  }
+  { Button2 Button
+    MoveScaled(35,51,23,5)
+    Text = ("Unzip .tar.gz")
+    Picture = Picture["Immagini/application-x-archive.png"]
+  }
+  { Button3 Button
+    MoveScaled(71,51,23,5)
+    Text = ("Unzip .tar.bz2")
+    Picture = Picture["Immagini/package-x-generic.png"]
+  }
+}

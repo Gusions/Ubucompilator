@@ -1,0 +1,13 @@
+' Gambas class file
+
+PUBLIC SUB Button2_Click()
+ME.CLOSE
+
+END
+
+
+PUBLIC SUB Button3_Click()
+
+  Desktop.Open("http://www.ubucompilator.wordpress.com")
+ME.Close
+END
