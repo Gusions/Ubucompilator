@@ -2,8 +2,6 @@
 
 > **A graphical tool that compiles a source tree and packages it as a `.deb`, without touching the terminal.**
 
-![Logo](Ubucompilator/Immagini/ubucompilator128x128.png)
-
 ---
 
 ## ⚠️ Historical / archived project
