@@ -126,6 +126,16 @@ Several mirrors derived from the Google Code export also exist on GitHub (e.g. `
 
 ---
 
+## Modern redesign concept
+
+A mockup of how Ubucompilator could look today as a GTK4 / libadwaita app: a single build pipeline instead of seven separate buttons, project auto-detection, a non-blocking live log and an optional clean-container build.
+
+![GTK4 redesign concept](docs/ubucompilator-gtk4-redesign.png)
+
+> Concept only: this is a design mockup, not working code.
+
+---
+
 ## Modern alternatives
 
 If you want to build a `.deb` from source today:
