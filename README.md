@@ -40,6 +40,39 @@ Also included:
 
 ---
 
+## Why it made sense at the time
+
+Ubucompilator was born in 2009–2010, when Ubuntu was winning over a wave of newcomers from Windows. For many of them the terminal was the biggest barrier to entry, and the software they wanted was often out of reach through the normal channels.
+
+**The software you wanted was often not packaged.**
+- In 2010 there was no Snap, no Flatpak, no AppImage culture and no one-click app store for third-party software. The Ubuntu Software Center only offered what was in the repositories.
+- Many programs, especially new releases, small projects and niche tools, were distributed **only as a source tarball** (`.tar.gz`, `.tar.bz2`, `.zip`). Packages in the official repositories were frozen at release time, so the version you read about in a blog post was usually newer than the one you could install.
+- PPAs on Launchpad helped, but they relied on someone else having built the package for *your* Ubuntu release and architecture. When nobody had, the only answer on forums was: "download the source and run `./configure && make && sudo make install`".
+
+**That answer was a wall for beginners.**
+- Compiling meant installing the right toolchain, reading `README` and `INSTALL` files, spotting missing `-dev` libraries from cryptic errors, and typing commands in the right order in the right folder.
+- One wrong step and nothing worked, with no hint about what to do next.
+
+**Ubucompilator turned that into a few clicks.**
+- Pick the extracted folder, press the buttons in order and watch the output in the window.
+- Unziptool handled the extraction, so the whole path from *downloaded tarball* to *installable program* stayed in one window.
+
+**It produced a `.deb`, not just a mess of files.**
+This is the part that mattered most. A bare `make install` scatters files across the system, and nothing tracks them: you can't cleanly uninstall, upgrade or see what got installed. Wrapping the result in a `.deb` (via `dh_make`/`debuild` or `checkinstall`) gave newcomers the things Ubuntu users already knew:
+- install by double-clicking the file, with dependency handling by the package manager;
+- uninstall from Synaptic or the Software Center, leaving the system clean;
+- an actual package they could keep, copy to another computer or share with friends.
+
+**A native build, tuned to the user's own system.**
+Compiling on the user's machine meant the binary was linked against the libraries of their own Ubuntu release and built for their own CPU, instead of relying on a generic binary made for someone else's setup. That is also why a `.deb` built locally often worked when a downloaded one for a different release did not.
+
+**It taught without lecturing.**
+The buttons followed the real order of the build chain, and the output pane showed what each step did. A curious user could learn what `configure`, `make` and `debuild` were by watching, and graduate to the terminal when they felt ready. The goal was never to hide Linux, only to lower the first step.
+
+In short: at a time when "not in the repositories" meant "not for you" if you couldn't use a shell, Ubucompilator let a beginner get that software installed, cleanly and reversibly, in a few clicks.
+
+---
+
 ## How it worked
 
 ```
