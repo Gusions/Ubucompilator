@@ -115,6 +115,8 @@ or opening the `Ubucompilator/` folder directly in the Gambas 2 IDE and running 
 | Bug tracker (Launchpad) | https://bugs.launchpad.net/ubucompilator |
 | Google Code archive | https://code.google.com/archive/p/ubucompilator |
 | Official project blog | https://ubucompilator.wordpress.com |
+| Ask Ubuntu: "GUI for configure, make, make install" | https://askubuntu.com/questions/42994/gui-for-configure-make-make-install |
+| WebUpd8: "Ubucompilator Easy .deb Creator 1.0 Beta" (2010) | http://www.webupd8.org/2010/10/ubucompilator-easy-deb-creator-10-beta.html |
 | Genbeta article (ES) | https://www.genbeta.com/linux/compila-tus-programas-en-paquetes-deb-con-ubucompilator |
 | This repository | https://github.com/Gusions/Ubucompilator |
 
