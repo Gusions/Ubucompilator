@@ -13,7 +13,7 @@ Ubucompilator is a **2009–2010 project** and is **no longer maintained**.
 - Active development: October 2010 (latest version in this repo: **0.99.2**; the Launchpad branch was marked "Stable version 1.0" in August 2011).
 - It was written in **Gambas 2**, a BASIC development environment for Linux that is now obsolete.
 - It depends on tools that no longer exist on modern distributions (e.g. `gksudo`).
-- The repository is kept online **for archival and historical documentation purposes**. **It is not meant to be used today** (see [Security warnings](#-security-warnings)).
+- The repository is kept online **for archival and historical documentation purposes**. **It is not meant to be used today.**
 
 ---
 
@@ -103,18 +103,6 @@ sudo make install
 or opening the `Ubucompilator/` folder directly in the Gambas 2 IDE and running it.
 
 > On modern systems **it will not work**: Gambas 2 is no longer in the repositories and `gksudo` has been removed.
-
----
-
-## 🔒 Security warnings
-
-The code dates from a time when these aspects were overlooked. **Do not use it on untrusted sources.**
-
-- **Command injection**: paths and e-mail addresses are concatenated into `SHELL` commands without escaping. A crafted folder name or e-mail can run arbitrary commands.
-- **`make install` as root** on unknown sources is equivalent to running their `Makefile` with administrator privileges.
-- **No error checking**: a failed step does not stop the following ones.
-- **Blocking UI**: the window freezes while a build is running.
-- Archives are extracted into the current directory, not the archive's own directory.
 
 ---
 
